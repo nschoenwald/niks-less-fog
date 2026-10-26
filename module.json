@@ -2,7 +2,7 @@
     "id": "niks-less-fog",
     "title": "Nik's Less Fog",
     "description": "This module allows adjustments to the appearance of the FOW.",
-    "version": "14.0.0",
+    "version": "14.0.1",
     "compatibility": {
         "minimum": "14",
         "verified": "14"

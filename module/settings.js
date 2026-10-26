@@ -2,6 +2,16 @@ import { MODULE_ID } from './lib.js';
 import { applyFogOpacity } from './fog.js';
 
 export const settings = {};
+
+/**
+ * Re-evaluate token vision after GM Vision changes, mirroring how core reacts to a Scene's tokenVision changing.
+ * Token vision sources must be rebuilt so a controlled token stops (or starts) restricting what the GM sees.
+ */
+function refreshTokenVision() {
+    if (!canvas.ready || !game.user.isGM) return;
+    canvas.perception.initialize();
+    for (const token of canvas.tokens.placeables) token.initializeVisionSource();
+}
 export const registerSettings = function () {
     /**
      * Option to set fog opacity for the GM.
@@ -67,7 +77,7 @@ export const registerSettings = function () {
         onChange: value => {
             settings.gmVisionButton = value;
             ui.controls?.render({ reset: true });
-            canvas.perception.update({ initializeVision: true });
+            refreshTokenVision();
         }
     });
     /**
@@ -81,7 +91,7 @@ export const registerSettings = function () {
         type: Boolean,
         onChange: value => {
             settings.showAllToGM = value;
-            canvas.perception.update({ initializeVision: true });
+            refreshTokenVision();
         }
     });
 }

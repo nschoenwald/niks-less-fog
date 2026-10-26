@@ -1,5 +1,9 @@
 # Changelog
 
+## 14.0.1
+
+- Toggling GM Vision now takes effect immediately, even while a token is selected.
+
 ## 14.0.0
 
 - The module is now **Nik's Less Fog** (`niks-less-fog`) and works with Foundry VTT v14. Older Foundry versions are no longer supported.
