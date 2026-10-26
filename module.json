@@ -1,22 +1,39 @@
 {
-    "id": "lessfog",
-    "title": "Less Fog",
+    "id": "niks-less-fog",
+    "title": "Nik's Less Fog",
     "description": "This module allows adjustments to the appearance of the FOW.",
-    "version": "0.13.0",
+    "version": "14.0.0",
     "compatibility": {
-        "minimum": 13,
-        "verified": "13.342"
+        "minimum": "14",
+        "verified": "14"
     },
     "authors": [
         {
             "name": "trdischat",
             "url": "https://github.com/trdischat/"
+        },
+        {
+            "name": "Nik",
+            "url": "https://github.com/nschoenwald"
         }
     ],
     "esmodules": [
         "main.js"
     ],
-    "url": "https://github.com/trdischat/lessfog",
-    "manifest": "https://github.com/trdischat/lessfog/releases/latest/download/module.json",
-    "download": "https://github.com/trdischat/lessfog/releases/download/0.13.0/module.zip"
+    "relationships": {
+        "requires": [
+            {
+                "id": "lib-wrapper",
+                "type": "module",
+                "compatibility": {
+                    "minimum": "1.13.0"
+                }
+            }
+        ]
+    },
+    "url": "https://github.com/nschoenwald/niks-less-fog",
+    "bugs": "https://github.com/nschoenwald/niks-less-fog/issues",
+    "changelog": "https://github.com/nschoenwald/niks-less-fog/blob/master/CHANGELOG.md",
+    "manifest": "https://github.com/nschoenwald/niks-less-fog/releases/latest/download/module.json",
+    "download": "https://github.com/nschoenwald/niks-less-fog/releases/latest/download/module.zip"
 }

@@ -1,0 +1,4 @@
+# Ignore all Markdown files except the ones published with the repo
+*.md
+!README.md
+!CHANGELOG.md

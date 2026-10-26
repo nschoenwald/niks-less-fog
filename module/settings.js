@@ -1,9 +1,12 @@
+import { MODULE_ID } from './lib.js';
+import { applyFogOpacity } from './fog.js';
+
 export const settings = {};
 export const registerSettings = function () {
     /**
      * Option to set fog opacity for the GM.
      */
-     game.settings.register("lessfog", "fog_opacity", {
+    game.settings.register(MODULE_ID, "fog_opacity", {
         name: "Fog Opacity",
         hint: "Opacity of fog layer. By default only for GMs (0 to 1 where 0 is fully transparent and 1 is fully opaque). Less Fog module default is 0.75. Value without this module is 1.0.",
         scope: "world",
@@ -17,28 +20,28 @@ export const registerSettings = function () {
         config: true,
         onChange: s => {
             settings.fog_opacity = s;
-            canvas.draw();
+            applyFogOpacity();
         }
     });
     /**
      * Option to reveal tokens to the GM.
      */
-    game.settings.register("lessfog", "reveal_tokens", {
+    game.settings.register(MODULE_ID, "reveal_tokens", {
         name: "Reveal Tokens",
-        hint: "Reveal all tokens on the canvas to the GM at all times (unless the Levels module is enabled).",
+        hint: "Reveal all tokens on the canvas to the GM at all times.",
         scope: "world",
         type: Boolean,
         default: true,
         config: true,
         onChange: s => {
             settings.reveal_tokens = s;
-            canvas.perception.initialize();
+            canvas.perception.update({ refreshVision: true });
         }
     });
     /**
      * Option to affect all players
      */
-    game.settings.register("lessfog", "affect_all", {
+    game.settings.register(MODULE_ID, "affect_all", {
         name: "Reveal to All Players",
         hint: "Reveal Unexplored areas and tokens to all players (useful if you just want to know about line of sight).",
         scope: "world",
@@ -47,13 +50,30 @@ export const registerSettings = function () {
         config: true,
         onChange: s => {
             settings.affect_all = s;
-            canvas.perception.initialize();
+            applyFogOpacity();
+            canvas.perception.update({ refreshVision: true });
+        }
+    });
+    /**
+     * Option to show the GM Vision button in the Token controls
+     */
+    game.settings.register(MODULE_ID, "gmVisionButton", {
+        name: "GM Vision Button",
+        hint: "Add a button to the Token controls that lets the GM toggle the fog of war on and off. Not available in the PF2e system, which provides its own button.",
+        scope: "world",
+        type: Boolean,
+        default: true,
+        config: true,
+        onChange: value => {
+            settings.gmVisionButton = value;
+            ui.controls?.render({ reset: true });
+            canvas.perception.update({ initializeVision: true });
         }
     });
     /**
      * Hidden option used by GM vision button
      */
-    game.settings.register("lessfog", "showAllToGM", {
+    game.settings.register(MODULE_ID, "showAllToGM", {
         name: "Show All to GM",
         scope: "client",
         config: false,
@@ -61,13 +81,14 @@ export const registerSettings = function () {
         type: Boolean,
         onChange: value => {
             settings.showAllToGM = value;
-            canvas.perception.initialize();
+            canvas.perception.update({ initializeVision: true });
         }
     });
 }
 export const loadSettings = function () {
-    settings.fog_opacity = game.settings.get("lessfog", "fog_opacity");
-    settings.reveal_tokens = game.settings.get("lessfog", "reveal_tokens");
-    settings.affect_all = game.settings.get("lessfog", "affect_all");
-    settings.showAllToGM = game.settings.get("lessfog", "showAllToGM");
+    settings.fog_opacity = game.settings.get(MODULE_ID, "fog_opacity");
+    settings.reveal_tokens = game.settings.get(MODULE_ID, "reveal_tokens");
+    settings.affect_all = game.settings.get(MODULE_ID, "affect_all");
+    settings.gmVisionButton = game.settings.get(MODULE_ID, "gmVisionButton");
+    settings.showAllToGM = game.settings.get(MODULE_ID, "showAllToGM");
 }
