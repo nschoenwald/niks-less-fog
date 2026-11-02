@@ -1,4 +1,10 @@
-# Ignore all Markdown files except the ones published with the repo
+# macOS
+.DS_Store
+
+# Release archives
+*.zip
+
+# Markdown: ignore all, except the docs published with the repo
 *.md
 !README.md
 !CHANGELOG.md
