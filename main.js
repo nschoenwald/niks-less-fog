@@ -30,7 +30,7 @@ Hooks.once('init', function () {
         tools.lessfogGMVision = {
             name: "lessfogGMVision",
             order: Object.keys(tools).length,
-            title: "Toggle GM Vision",
+            title: "niks-less-fog.controls.gmVision",
             icon: "fa-regular fa-eye-slash",
             toggle: true,
             active: settings.showAllToGM,

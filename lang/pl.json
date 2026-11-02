@@ -1,0 +1,28 @@
+{
+  "niks-less-fog": {
+    "settings": {
+      "fogOpacity": {
+        "name": "Krycie mgły",
+        "hint": "Krycie warstwy mgły. Domyślnie tylko dla MG (od 0 do 1, gdzie 0 to pełna przezroczystość, a 1 pełne krycie). Domyślna wartość Less Fog to 0,75. Bez tego modułu wartość wynosi 1,0."
+      },
+      "revealTokens": {
+        "name": "Odsłaniaj żetony",
+        "hint": "Zawsze pokazuje MG wszystkie żetony na scenie."
+      },
+      "affectAll": {
+        "name": "Odsłaniaj wszystkim graczom",
+        "hint": "Odsłania niezbadane obszary i żetony wszystkim graczom (przydatne, jeśli chcesz tylko znać linię wzroku)."
+      },
+      "gmVisionButton": {
+        "name": "Przycisk widoku MG",
+        "hint": "Dodaje do narzędzi żetonów przycisk, którym MG może włączać i wyłączać mgłę wojny. Niedostępne w systemie PF2e, który ma własny przycisk."
+      },
+      "showAllToGM": {
+        "name": "Pokaż wszystko MG"
+      }
+    },
+    "controls": {
+      "gmVision": "Przełącz widok MG"
+    }
+  }
+}

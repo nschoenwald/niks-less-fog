@@ -1,0 +1,28 @@
+{
+  "niks-less-fog": {
+    "settings": {
+      "fogOpacity": {
+        "name": "Neprůhlednost mlhy",
+        "hint": "Neprůhlednost vrstvy mlhy. Ve výchozím stavu jen pro PJ (od 0 do 1, kde 0 je zcela průhledná a 1 zcela neprůhledná). Výchozí hodnota Less Fog je 0,75. Bez tohoto modulu je hodnota 1,0."
+      },
+      "revealTokens": {
+        "name": "Odhalit žetony",
+        "hint": "Vždy zobrazí PJ všechny žetony na scéně."
+      },
+      "affectAll": {
+        "name": "Odhalit všem hráčům",
+        "hint": "Odhalí neprozkoumané oblasti a žetony všem hráčům (užitečné, pokud chcete znát jen linii pohledu)."
+      },
+      "gmVisionButton": {
+        "name": "Tlačítko pohledu PJ",
+        "hint": "Přidá do ovládání žetonů tlačítko, kterým může PJ zapínat a vypínat mlhu války. Není k dispozici v systému PF2e, který má vlastní tlačítko."
+      },
+      "showAllToGM": {
+        "name": "Ukázat PJ vše"
+      }
+    },
+    "controls": {
+      "gmVision": "Přepnout pohled PJ"
+    }
+  }
+}

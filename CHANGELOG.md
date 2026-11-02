@@ -1,5 +1,10 @@
 # Changelog
 
+## 14.1.0
+
+- The module is now available in German, French, Spanish, Italian, Brazilian Portuguese, Japanese, Polish and Czech.
+- Setting names, hints and the GM Vision button tooltip are now translatable.
+
 ## 14.0.1
 
 - Toggling GM Vision now takes effect immediately, even while a token is selected.

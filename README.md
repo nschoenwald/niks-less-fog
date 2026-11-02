@@ -34,6 +34,12 @@ The Pathfinder 2e game system already has a button with a similar function. Ther
 
 Nik's Less Fog uses a new module id (`niks-less-fog`). Settings from the original `lessfog` module are not carried over, so check the module settings after switching.
 
+## Languages
+
+English, Deutsch, Français, Español, Italiano, Português (Brasil), 日本語, Polski and Čeština.
+
+All translations were written with AI help and may contain mistakes. Corrections are welcome as an issue or pull request.
+
 ## License
 
 This Foundry VTT module, written by trdischat with major assistance from Calego and KaKaRoTo, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Updated for Foundry VTT v14 by Nik.

@@ -1,0 +1,28 @@
+{
+  "niks-less-fog": {
+    "settings": {
+      "fogOpacity": {
+        "name": "Nebeldeckkraft",
+        "hint": "Deckkraft der Nebelebene. Standardmäßig nur für SL (0 bis 1, wobei 0 vollständig transparent und 1 vollständig deckend ist). Standardwert von Less Fog ist 0,75. Ohne dieses Modul ist der Wert 1,0."
+      },
+      "revealTokens": {
+        "name": "Token aufdecken",
+        "hint": "Zeigt der SL jederzeit alle Token auf der Szene."
+      },
+      "affectAll": {
+        "name": "Für alle Spieler aufdecken",
+        "hint": "Deckt unerkundete Bereiche und Token für alle Spieler auf (nützlich, wenn es nur um die Sichtlinie geht)."
+      },
+      "gmVisionButton": {
+        "name": "SL-Sicht-Schaltfläche",
+        "hint": "Fügt den Token-Werkzeugen eine Schaltfläche hinzu, mit der die SL den Nebel des Krieges ein- und ausschalten kann. Nicht verfügbar im PF2e-System, das eine eigene Schaltfläche mitbringt."
+      },
+      "showAllToGM": {
+        "name": "SL alles zeigen"
+      }
+    },
+    "controls": {
+      "gmVision": "SL-Sicht umschalten"
+    }
+  }
+}
