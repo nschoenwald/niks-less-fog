@@ -36,9 +36,9 @@ Nik's Less Fog uses a new module id (`niks-less-fog`). Settings from the origina
 
 ## Languages
 
-🇬🇧 English · 🇩🇪 Deutsch · 🇫🇷 Français · 🇪🇸 Español · 🇮🇹 Italiano · 🇧🇷 Português (Brasil) · 🇯🇵 日本語 · 🇵🇱 Polski · 🇨🇿 Čeština
+🇬🇧 English · 🇩🇪 Deutsch
 
-All translations were written with AI help and may contain mistakes. Corrections are welcome as an issue or pull request.
+Translations into other languages by native speakers are welcome as an issue or pull request.
 
 ## License
 
